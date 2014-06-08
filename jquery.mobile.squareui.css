@@ -4124,7 +4124,7 @@ html .ui-bar-b,html .ui-page-theme-b .ui-bar-inherit,html .ui-bar-b .ui-bar-inhe
 html .ui-bar-b{border-width:1px;border-style:solid}
 html .ui-overlay-b,html .ui-page-theme-b,html .ui-page-theme-b .ui-panel-wrapper{background:#f9f9f9;border-color:#bbb;color:#333}
 html .ui-body-b,html .ui-page-theme-b .ui-body-inherit,html .ui-bar-b .ui-body-inherit,html .ui-body-b .ui-body-inherit,html body .ui-group-theme-b .ui-body-inherit,html .ui-panel-page-container-b{background:#fff;border-color:#166549;color:#333}
-html .ui-body-b{border-width:0px;border-style:solid}
+html .ui-body-b{border-width:0px;border-style:solid;background:#f9f9f9}
 html .ui-page-theme-b a,html .ui-bar-b a,html .ui-body-b a,html body .ui-group-theme-b a{color:#1b7e5a;font-weight:bold}
 html .ui-page-theme-b a:visited,html .ui-bar-b a:visited,html .ui-body-b a:visited,html body .ui-group-theme-b a:visited{color:#1b7e5a}
 html .ui-page-theme-b a:hover,html .ui-bar-b a:hover,html .ui-body-b a:hover,html body .ui-group-theme-b a:hover{color:#1b7e5a}
