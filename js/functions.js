@@ -2,9 +2,9 @@ function checkRequirements()
 {
    if (typeof window.localStorage === 'undefined')
    {
-      console.log('The database is not supported.');
+      console.log('Database tidak suport.');
       navigator.notification.alert(
-         'Your device does not support the database used by this app.',
+         'Perangkat anda tidak mensuport database yang digunakan pada aplikasi ini.',
          function(){},
          'Error'
       );
@@ -30,9 +30,6 @@ function updateIcons()
    }
 }
 
-/**
- * Initialize the application
- */
 function initApplication()
 {
    translateMainPage();
@@ -93,9 +90,9 @@ function initApplication()
 
       if (navigator.network.connection.type === Connection.NONE)
       {
-         console.log('The connection is off. Can\'t update exchange rates.');
+         console.log('Tidak ada koneksi internet. Tidak dapat mengupdate nilai tukar.');
          navigator.notification.alert(
-            'Your device has the connections disabled. Can\'t update exchange rates.',
+            'Perangkat anda tidak terkoneksi dengan internet. Tidak dapat mengupdate nilai tukar.',
             function(){},
             'Error'
          );
@@ -107,9 +104,6 @@ function initApplication()
    $.mobile.loading('hide');
 }
 
-/**
- * Translate the main page
- */
 function translateMainPage()
 {
    navigator.globalization.getLocaleName(
@@ -129,9 +123,6 @@ function translateMainPage()
    );
 }
 
-/**
- * Open all the links as internals
- */
 function openLinksInApp()
 {
    $("a[target=\"_blank\"]").on('click', function(event) {
@@ -140,9 +131,6 @@ function openLinksInApp()
    });
 }
 
-/**
- * Use the stored currencies to update the selection lists
- */
 function fillCurrenciesSelection()
 {
    var currencies = Currency.getCurrencies();
@@ -179,9 +167,6 @@ function fillCurrenciesSelection()
    $toCurrencyType.selectmenu('refresh');
 }
 
-/**
- * Update the exchange rates using the ECB web service
- */
 function updateExchangeRates()
 {
    if (navigator.network.connection.type !== Connection.NONE)
@@ -233,9 +218,9 @@ function updateExchangeRates()
          'XML'
       )
       .error(function() {
-         console.log('Unable to retrieve exchange rates from the provider.');
+         console.log('Tidak dapat mendapatkan nilai tukar dari sumber.');
          navigator.notification.alert(
-            'Unable to retrieve exchange rates from the provider.',
+            'Tidak dapat mendapatkan nilai tukar dari sumber.',
             function(){},
             'Error'
          );
@@ -249,10 +234,10 @@ function updateExchangeRates()
    // Check if there are data into the local storage
    else if (Currency.getCurrencies().length === 0)
    {
-      console.log('The connection is off and there aren\'t rates previously stored.');
+      console.log('Tidak terkoneksi dengan internet dan tidak ada data yang tersimpan sebelumnya.');
       navigator.notification.alert(
-         'Your device has the connection disabled and there aren\'t rates previously stored.\n' +
-         'Please turn on your connection.',
+         'Tidak terkoneksi dengan internet dan tidak ada data yang tersimpan sebelumnya.\n' +
+         'Periksa kembali koneksi internet anda.',
          function(){},
          'Error'
       );

@@ -27,5 +27,5 @@
    <gap:splash src="splash.png" />
    <gap:splash src="images/splash-160x220.png" gap:platform="android" gap:density="ldpi" />
    <gap:splash src="splash.png" gap:platform="android" gap:density="mdpi" />
-   <gap:splash src="images/splash-450x650.png" gap:platform="android" gap:density="hdpi" />
+   <gap:splash src="images/splash-720x1280.png" gap:platform="android" gap:density="hdpi" />
 </widget>

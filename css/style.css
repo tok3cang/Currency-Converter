@@ -22,7 +22,20 @@
    text-align: center;
    color:#b12d2d;
 }
+.ui-header, .ui-footer{border:none;}
+.ui-content, .ui-body-b{border:none;}
+.ui-content, .ui-body-b{border:none;}
 
+@font-face
+{
+font-family: 'Lato';
+src: url("../fonts/calibri.woff");
+} 
+
+body{font:'fontnya';}
+
+html.ui-body-b,#content.ui-body-b,#content.ui-content{border:none;}
+html .ui-body-b{border-width:0;border-style:solid}
 /**.ui-bar-b{
 	border:1px solid #aaa;
 	background:#fff;
