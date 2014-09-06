@@ -46,12 +46,6 @@ Currency.getCurrencies = function()
    return (currencies === null) ? [] : currencies;
 }
 
-Currency.getCurrency = function(abbreviation)
-{
-   var index = Currency.getIndex(abbreviation);
-   return (index === false) ? null : Currency.getCurrencies()[index];
-}
-
 Currency.getIndex = function(abbreviation)
 {
    var currencies = Currency.getCurrencies();
@@ -64,6 +58,12 @@ Currency.getIndex = function(abbreviation)
    return false;
 }
 
+Currency.getCurrency = function(abbreviation)
+{
+   var index = Currency.getIndex(abbreviation);
+   return (index === false) ? null : Currency.getCurrencies()[index];
+}
+
 Currency.getRate = function(abbreviation)
 {
    var currency = Currency.getCurrency(abbreviation);
@@ -72,6 +72,5 @@ Currency.getRate = function(abbreviation)
 
 Currency.convert = function(value, from, to)
 {
-   // Round up to the 2nd decimal
    return Math.round(value / Currency.getRate(from) * Currency.getRate(to) * 100) / 100;
 }

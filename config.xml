@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap	= "http://phonegap.com/ns/1.0"
-        id        = "com.abngchobsgmail.com.currencyconverter"
+        id        = "ac.id.abngchobs.student.gunadarma.currencyconverter"
         version   = "1.0.0">
 
    <name>Currency converter</name>
 
    <description>Currency Converter adalah aplikasi sederhana yang berguna untuk membantu mengubah nilai mata uang satu ke yang lainnya. Aplikasi ini dapat memperbaharui nilai tukar terakhir setiap saat.</description>
 
-   <author href="#" email="abngchobs@gmail.com">Dennis Mahisa Aditya</author>
+   <author href="http://10108528.student.gunadarma.ac.id" email="abngchobs@student.gunadarma.ac.id">Dennis Mahisa Aditya</author>
 
    <feature name="http://api.phonegap.com/1.0/network"/>
 

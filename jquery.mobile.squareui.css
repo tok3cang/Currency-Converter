@@ -4233,7 +4233,7 @@ html .ui-page-theme-h .ui-checkbox-on:after,html .ui-bar-h .ui-checkbox-on:after
 html .ui-page-theme-h .ui-radio-on:after,html .ui-bar-h .ui-radio-on:after,html .ui-body-h .ui-radio-on:after,html body .ui-group-theme-h .ui-radio-on:after,html .ui-btn.ui-radio-on.ui-btn-h:after{background-color:#b18456;color:#fff}
 
 @font-face {
-  font-family: 'Lato';
+  font-family: 'a';
   font-style: normal;
   font-weight: 400;
   src: local('Lato Regular'),
@@ -4242,7 +4242,7 @@ html .ui-page-theme-h .ui-radio-on:after,html .ui-bar-h .ui-radio-on:after,html 
     url(fonts/calibri.ttf) format('truetype');
 }
 @font-face {
-  font-family: 'Lato';
+  font-family: 'a';
   font-style: normal;
   font-weight: 700;
   src: local('Lato Bold'),
@@ -4251,7 +4251,7 @@ html .ui-page-theme-h .ui-radio-on:after,html .ui-bar-h .ui-radio-on:after,html 
     url(fonts/lato-bold.ttf) format('truetype');
 }
 @font-face {
-  font-family: 'Lato';
+  font-family: 'a';
   font-style: normal;
   font-weight: 900;
   src: local('Lato Black'),
@@ -4260,7 +4260,7 @@ html .ui-page-theme-h .ui-radio-on:after,html .ui-bar-h .ui-radio-on:after,html 
     url(fonts/lato-black.ttf) format('truetype');
 }
 @font-face {
-  font-family: 'Lato';
+  font-family: 'a';
   font-style: italic;
   font-weight: 400;
   src: local('Lato Italic'),

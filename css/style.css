@@ -32,7 +32,7 @@ font-family: 'Lato';
 src: url("../fonts/calibri.woff");
 } 
 
-body{font:'fontnya';}
+body{font:'Lato';}
 
 html.ui-body-b,#content.ui-body-b,#content.ui-content{border:none;}
 html .ui-body-b{border-width:0;border-style:solid}

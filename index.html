@@ -4,15 +4,12 @@
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <title>Currency Converter</title>
-      <!--<link rel="stylesheet" href="css/jquery.mobile-1.4.2.min.css" type="text/css" media="all" />-->
       <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
 	  <link rel="stylesheet" href="jquery.mobile.squareui.css" type="text/css" media="all" />
       <script src="js/jquery-1.8.3.min.js"></script>
       <script src="js/jquery.mobile.config.js"></script>
       <script src="js/jquery.mobile-1.4.2.min.js"></script>
       <script src="cordova.js"></script>
-      <script src="js/jquery.auderoTextChanger.min.js"></script>
-      <script src="js/translation.js"></script>
       <script src="js/currency.js"></script>
       <script src="js/settings.js"></script>
       <script src="js/functions.js"></script>
@@ -23,46 +20,20 @@
    </head>
    <body>
       <div id="home-page" data-role="page" data-theme="f">
-         <!--<div data-role="panel" id="panel" data-position="left" data-display="push">
-			<!--<fieldset class="ui-grid-a">
-			<div class="ui-button-a"><button data-icon="flat-new">Button B</button></div>
-			<!--<div class="ui-block-a">
-			<button data-icon="flat-settings" data-theme="a">-->
-			<!--<div data-role="fieldcontain">
-				<a href="#about-page" data-role="button" data-icon="flat-bubble" data-iconpos="notext" data-theme="b" data-inline="true">About</a>
-			</div>-->
-				
-			<!--</button>
-			</div>-->
-			<!--</fieldset>-->
-			<!--<li><a href="#home-page" data-role="button" data-icon="home" data-iconpos="notext" data-prefetch="prefetch" data-transition="flip">Home</a></li>-->
-		 <!--</div>-->
 		 <header data-role="header">
 		 <a href="#about-page" data-role="button" data-icon="info" data-iconpos="notext" data-transition="flip" data-mini="true">About</a>
-			<!--<a href="#panel" data-role="button" data-icon="flat-menu"></a>
-            <!--<a data-iconpos="notext" data-role="button" data-icon="home" title="Home">Home</a>-->
-			<h1>Currency<br/>Converter</h1>
+			<h1>CURRENCY<br/>CONVERTER</h1>
             <a href="#" id="update-button" data-icon="refresh" data-iconpos="notext" class="ui-btn-right">Update</a>
          </header>
          <div data-role="content">
-            <!--<p id="app-description">
-               Currency Converter adalah aplikasi sederhana yang berguna untuk membantu mengubah nilai mata uang satu ke yang lainnya. 
-			   Aplikasi ini dapat memperbaharui nilai tukar terakhir setiap saat.
-            </p>
-            <label id="last-update-label">Last update rates:</label>
-            <span id="last-update"></span>-->
             <form id="form-converter" name="form-converter" action="#">
-               <!--<h2 id="convert-title">Convert</h2>-->
                <div data-role="fieldcontain">
+			   <h4 id="result-title">Convert</h4>
                   <label for="from-value" id="from-value-label">Value:</label>
                   <input type="number" placeholder="0" id="from-value" name="from-value" pattern="[0-9]*" min="0" max="999999999999999" /><br/>
-               <!--</div>
-               <div data-role="fieldcontain">-->
                   <label for="from-type" id="from-type-label">From :</label>
                   <select id="from-type">
                   </select><br/>
-               <!--</div>
-               <div data-role="fieldcontain">-->
                   <label for="to-type" id="to-type-label">To :</label>
                   <select id="to-type">
                   </select>
@@ -78,91 +49,33 @@
                   <div class="ui-block-b">
                      <input id="submit-button" type="submit" value="Convert" data-icon="check" />
                   </div>
-               </div>
+               </div><br/>
+			   <hr/>
+            <center><label id="last-update-label">Last update rates:
+            <font color="#b12d2d"><span id="last-update"></span></font></label></center>
             </form>
          </div>
-         <!--<footer data-role="footer">
-            <!--<h3 id="copyright-title">Universitas Gunadarma</h3>-->
-            
-         <!--</footer>-->
       </div>
        <div id="about-page" data-role="page" data-theme="f">
          <header data-role="header">
 			<a href="#" data-icon="back" data-iconpos="notext" data-rel="back" title="Go back">Back</a>
-            <h1>About</h1>
+            <h1>ABOUT</h1>
          </header>
-         <div id="content" data-role="content"><br/>
+         <div id="content" data-role="content">
+			<h4 id="result-title">About Application</h4>
 			<p id="app-description">
-               Currency Converter adalah aplikasi sederhana yang berguna untuk membantu mengubah nilai mata uang satu ke yang lainnya. 
-			   Aplikasi ini dapat memperbaharui nilai tukar terakhir setiap saat.
+               Currency Converter adalah aplikasi <i>multi-platform</i> sederhana yang berguna untuk membantu mengubah nilai mata uang satu ke yang lainnya. 
+			   Aplikasi ini dapat memperbaharui nilai tukar terakhir setiap saat dengan mengklik update (icon refresh pada pojok kanan atas halaman muka).
+			   <br/>
+			   <br/>
+			   <small>Version: 1.0.0</small>
             </p>
-			<br/>
-            <label id="last-update-label">Last update rates:</label>
-            <span id="last-update"></span>
-            <!--<div class="person">
-               <figure class="photo">
-                  <img src="images/aurelio-de-rosa.png" alt="Photo of Aurelio De Rosa" />
-                  <figcaption>Aurelio De Rosa</figcaption>
-               </figure>
-               <article>
-                  <p>
-                     I'm an Italian web and app developer who have a bachelor degree in Computer Science and more than
-                     5 years' experience programming for the web using HTML5, CSS3, JavaScript and PHP. I mainly use the
-                     LAMP stack and frameworks like jQuery, jQuery Mobile, Cordova (PhoneGap) and Zend Framework.
-                     My interests also include web security, web accessibility, SEO and WordPress.
-                  </p>
-                  <p>
-                     Currently I'm self-employed working with the cited technologies and I'm also a regular contributor to the
-                     SitePoint network where I write articles about the topics I usually work with and more. The articles can
-                     be found on the following websites of the network:
-                     <a href="http://buildmobile.com/author/aderosa/" target="_blank">BuildMobile.com</a>,
-                     <a href="http://phpmaster.com/author/aderosa/" target="_blank">PHPMaster.com</a>,
-                     <a href="http://jspro.com/author/aderosa/" target="_blank">JSPro.com</a> and
-                     <a href="http://www.sitepoint.com/author/aderosa/" target="_blank">SitePoint.com</a>.
-                  </p>
-               </article>
-               <article>
-                  <h2>Contacts</h2>
-                  <ul data-role="listview" data-inset="true">
-                     <li>
-                        <a href="http://www.audero.it" target="_blank">
-                           <img src="images/website-icon.png" alt="Website icon" />
-                           Visit my website: www.audero.it
-                        </a>
-                     </li>
-                     <li>
-                        <a href="mailto:aurelioderosa@gmail.com" target="_blank">
-                           <img src="images/email-icon.png" alt="Email icon" />
-                           Drop me an email: aurelioderosa@gmail.com
-                        </a>
-                     </li>
-                     <li>
-                        <a href="mailto:a.derosa@audero.it" target="_blank">
-                           <img src="images/email-icon.png" alt="Email icon" />
-                           Drop me an email (alternative address): a.derosa@audero.it
-                        </a>
-                     </li>
-                     <li>
-                        <a href="https://twitter.com/AurelioDeRosa" target="_blank">
-                           <img src="images/twitter-icon.png" alt="Twitter icon" />
-                           Follow me on Twitter (@AurelioDeRosa)
-                        </a>
-                     </li>
-                     <li>
-                        <a href="http://it.linkedin.com/in/aurelioderosa/en" target="_blank">
-                           <img src="images/linkedin-icon.png" alt="LinkedIn icon" />
-                           View my profile on LinkedIn
-                        </a>
-                     </li>
-                     <li>
-                        <a href="https://bitbucket.org/AurelioDeRosa" target="_blank">
-                           <img src="images/bitbucket-icon.png" alt="BitBucket icon" />
-                           Visit my repository on BitBucket (AurelioDeRosa)
-                        </a>
-                     </li>
-                  </ul>
-               </article>
-            </div>-->
+			<hr/>
+			<h4 id="result-title">About Author</h4>
+			<p id="app-description">
+               DENNIS MAHISA ADITYA, mahasiswa yang sedang menempuh jenjang S1 Sistem Informasi di <a style="text-decoration:none" href="http://gunadarma.ac.id">Universitas Gunadarma</a>. 
+			   Dengan bidang utamanya adalah pemrograman web, khususnya HTML, CSS, JavaScript, dan PHP.
+            </p>
          </div>
       </div>
    </body>
