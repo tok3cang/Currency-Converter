@@ -32,7 +32,6 @@ function updateIcons()
 
 function initApplication()
 {
-   translateMainPage();
    openLinksInApp();
    if (checkRequirements() === false)
    {
@@ -50,14 +49,12 @@ function initApplication()
    $('#submit-button').click(function(event) {
       event.preventDefault();
 
-      // Convert the value
       var result = Currency.convert(
          $('#from-value').val(),
          $('#from-type').val(),
          $('#to-type').val()
       );
 
-      // Localize the result
       navigator.globalization.numberToString(
          result,
          function(number)
@@ -70,7 +67,6 @@ function initApplication()
          }
       );
 
-      // Update settings
       var settings = Settings.getSettings();
       if ($.isEmptyObject(settings))
          settings = new Settings();
@@ -104,25 +100,6 @@ function initApplication()
    $.mobile.loading('hide');
 }
 
-function translateMainPage()
-{
-   navigator.globalization.getLocaleName(
-      function(locale)
-      {
-         var translation = Translation[locale.value.substring(0, 2)];
-         if (typeof translation === 'undefined')
-            return;
-
-         for(var key in translation)
-            $('#' + key).auderoTextChanger(translation[key]);
-      },
-      function()
-      {
-         console.log('An error has occurred with the translation');
-      }
-   );
-}
-
 function openLinksInApp()
 {
    $("a[target=\"_blank\"]").on('click', function(event) {
@@ -137,11 +114,9 @@ function fillCurrenciesSelection()
    var $fromCurrencyType = $('#from-type');
    var $toCurrencyType = $('#to-type');
 
-   // Empty elements
    $fromCurrencyType.empty();
    $toCurrencyType.empty();
 
-   // Load all the stored currencies
    for(var i = 0; i < currencies.length; i++)
    {
       $fromCurrencyType.append('<option value="' + currencies[i].abbreviation + '">' +
@@ -150,7 +125,6 @@ function fillCurrenciesSelection()
          currencies[i].abbreviation + '</option>');
    }
 
-   // Update the selected option using the last currencies used
    var settings = Settings.getSettings();
    if (!$.isEmptyObject(settings))
    {
@@ -185,7 +159,6 @@ function updateExchangeRates()
          function(data)
          {
             var $currenciesElements = $(data).find('Cube[currency]');
-            // The EURO is the default currency, so it isn't in the retrieved data
             var currencies = [new Currency('EUR', '1')];
 
             var i;
@@ -200,11 +173,9 @@ function updateExchangeRates()
             }
 
             currencies.sort(Currency.compare);
-            // Store the data
             for(i = 0; i < currencies.length; i++)
                currencies[i].save();
 
-            // Update settings
             var settings = Settings.getSettings();
             if ($.isEmptyObject(settings))
                settings = new Settings();
@@ -231,7 +202,6 @@ function updateExchangeRates()
          $.mobile.loading('hide');
       });
    }
-   // Check if there are data into the local storage
    else if (Currency.getCurrencies().length === 0)
    {
       console.log('Tidak terkoneksi dengan internet dan tidak ada data yang tersimpan sebelumnya.');
@@ -253,7 +223,6 @@ function updateLastUpdate()
       return;
    }
 
-   // Show the last time the rates have been updated
    navigator.globalization.dateToString(
       new Date(Settings.getSettings().lastUpdate),
       function (date)
