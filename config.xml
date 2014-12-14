@@ -12,7 +12,7 @@
 
    <author href="http://10108528.student.gunadarma.ac.id" email="abngchobs@student.gunadarma.ac.id">Dennis Mahisa Aditya</author>
 
-   <gap:plugin name="http://api.phonegap.com/1.0/network"/>
+   <feature name="http://api.phonegap.com/1.0/network"/>
 
    <access origin="*" />
 
