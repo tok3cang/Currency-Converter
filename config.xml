@@ -13,7 +13,7 @@
 
    <author href="http://10108528.student.gunadarma.ac.id" email="abngchobs@student.gunadarma.ac.id">Dennis Mahisa Aditya</author>
 
-   <gap:plugin name="Globalization" value="org.apache.cordova.Globalization" />
+   <gap:plugin name="Globalization" value="org.apache.cordova.Globalization" version="0.2.6"/>
    <gap:plugin name="InAppBrowser" value="org.apache.cordova.InAppBrowser" />
 
    
