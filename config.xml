@@ -25,7 +25,7 @@
     
    <preference name="phonegap-version" value="3.5.0" />
    <preference name="target-device" value="universal" />
-   <preference name="SplashScreen" value="foo" />
+   <preference name="SplashScreen" value="splash" />
    <preference name="SplashScreenDelay" value="10000" />
 	
    <access origin="*" />
