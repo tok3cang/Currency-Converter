@@ -3,22 +3,26 @@
         xmlns:gap	= "http://phonegap.com/ns/1.0"
         id        = "ac.id.abngchobs.student.gunadarma.currencyconverter"
         version   = "1.0.0">
-    
-   <preference name="phonegap-version" value="3.5.0" />
-   <preference name="target-device" value="universal" />
+   
    
    <name>Currency converter</name>
 
-   <description>Currency Converter adalah aplikasi sederhana yang berguna untuk membantu mengubah nilai mata uang satu ke yang lainnya. Aplikasi ini dapat memperbaharui nilai tukar terakhir setiap saat.</description>
+   <description>Currency Converter is a simple multi-platform applications that are useful to help change the value of one currency to another.</description>
 
    <author href="http://10108528.student.gunadarma.ac.id" email="abngchobs@student.gunadarma.ac.id">Dennis Mahisa Aditya</author>
 
-   <gap:plugin name="Globalization" value="org.apache.cordova.Globalization" version="0.2.6"/>
-   <gap:plugin name="InAppBrowser" value="org.apache.cordova.InAppBrowser" />
+	<gap:plugin name="org.apache.cordova.globalization" />
+    <gap:plugin name="org.apache.cordova.inappbrowser" />
+    <gap:plugin name="org.apache.cordova.network-information" />
+    <gap:plugin name="org.apache.cordova.splashscreen" />
+   <!--<gap:plugin name="Globalization" value="org.apache.cordova.Globalization" version="0.2.6"/>
+   <gap:plugin name="InAppBrowser" value="org.apache.cordova.InAppBrowser" />-->
 
    
    <feature name="http://api.phonegap.com/1.0/network"/>
-
+    
+   <preference name="phonegap-version" value="3.6.4" />
+   <preference name="target-device" value="universal" />
    <access origin="*" />
 
    <!-- Icons -->
@@ -28,8 +32,8 @@
    <icon src="images/icon-72x72.png" width="72" height="72" gap:platform="ios" />
 
    <!-- Splash Screens -->
-   <gap:splash src="splash.png" />
-   <gap:splash src="images/splash-160x220.png" gap:platform="android" gap:density="ldpi" />
-   <gap:splash src="splash.png" gap:platform="android" gap:density="mdpi" />
-   <gap:splash src="images/splash-720x1280.png" gap:platform="android" gap:density="hdpi" />
+   <splash src="splash.png" />
+   <splash src="images/splash-160x220.png" gap:platform="android" gap:density="ldpi" />
+   <splash src="splash.png" gap:platform="android" gap:density="mdpi" />
+   <splash src="images/splash-720x1280.png" gap:platform="android" gap:density="hdpi" />
 </widget>

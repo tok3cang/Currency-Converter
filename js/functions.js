@@ -4,7 +4,7 @@ function checkRequirements()
    {
       console.log('Database tidak suport.');
       navigator.notification.alert(
-         'Perangkat anda tidak mensuport database yang digunakan pada aplikasi ini.',
+         'Your device do not support the use of data storage',
          function(){},
          'Error'
       );
@@ -88,7 +88,7 @@ function initApplication()
       {
          console.log('Tidak ada koneksi internet. Tidak dapat mengupdate nilai tukar.');
          navigator.notification.alert(
-            'Perangkat anda tidak terkoneksi dengan internet. Tidak dapat mengupdate nilai tukar.',
+            'Your device is not connected to the Internet. Unable to update the exchange rate.',
             function(){},
             'Error'
          );
@@ -191,7 +191,7 @@ function updateExchangeRates()
       .error(function() {
          console.log('Tidak dapat mendapatkan nilai tukar dari sumber.');
          navigator.notification.alert(
-            'Tidak dapat mendapatkan nilai tukar dari sumber.',
+            'Unable to get the exchange rate from the source.',
             function(){},
             'Error'
          );
@@ -206,8 +206,8 @@ function updateExchangeRates()
    {
       console.log('Tidak terkoneksi dengan internet dan tidak ada data yang tersimpan sebelumnya.');
       navigator.notification.alert(
-         'Tidak terkoneksi dengan internet dan tidak ada data yang tersimpan sebelumnya.\n' +
-         'Periksa kembali koneksi internet anda.',
+         'Not connected to the internet and there are no previously stored data. \n'+
+          'Check your internet connection.',
          function(){},
          'Error'
       );
