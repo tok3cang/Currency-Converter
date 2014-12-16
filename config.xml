@@ -15,6 +15,8 @@
     <gap:plugin name="org.apache.cordova.inappbrowser" />
     <gap:plugin name="org.apache.cordova.network-information" />
     <gap:plugin name="org.apache.cordova.splashscreen" />
+	<gap:plugin name="org.apache.cordova.dialogs" />
+	
    <!--<gap:plugin name="Globalization" value="org.apache.cordova.Globalization" version="0.2.6"/>
    <gap:plugin name="InAppBrowser" value="org.apache.cordova.InAppBrowser" />-->
 
@@ -23,6 +25,9 @@
     
    <preference name="phonegap-version" value="3.5.0" />
    <preference name="target-device" value="universal" />
+   <preference name="SplashScreen" value="foo" />
+   <preference name="SplashScreenDelay" value="10000" />
+	
    <access origin="*" />
 
    <!-- Icons -->
