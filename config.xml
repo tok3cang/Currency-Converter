@@ -31,14 +31,14 @@
    <access origin="*" />
 
    <!-- Icons -->
-   <icon src="icon.png" width="64" height="64" gap:role="default" />
-   <icon src="images/icon-72x72.png" width="72" height="72" gap:platform="android" gap:density="hdpi" />
-   <icon src="images/icon-96x96.png" width="96" height="96" gap:platform="android" gap:density="xhdpi" />
-   <icon src="images/icon-72x72.png" width="72" height="72" gap:platform="ios" />
+   <gap:icon src="icon.png" width="64" height="64" gap:role="default" />
+   <gap:icon src="images/icon-72x72.png" width="72" height="72" gap:platform="android" gap:density="hdpi" />
+   <gap:icon src="images/icon-96x96.png" width="96" height="96" gap:platform="android" gap:density="xhdpi" />
+   <gap:icon src="images/icon-72x72.png" width="72" height="72" gap:platform="ios" />
 
    <!-- Splash Screens -->
-   <splash src="splash.png" />
-   <splash src="images/splash-160x220.png" gap:platform="android" gap:density="ldpi" />
-   <splash src="splash.png" gap:platform="android" gap:density="mdpi" />
-   <splash src="images/splash-720x1280.png" gap:platform="android" gap:density="hdpi" />
+   <gap:splash src="splash.png" />
+   <gap:splash src="images/splash-160x220.png" gap:platform="android" gap:density="ldpi" />
+   <gap:splash src="splash.png" gap:platform="android" gap:density="mdpi" />
+   <gap:splash src="images/splash-720x1280.png" gap:platform="android" gap:density="hdpi" />
 </widget>
